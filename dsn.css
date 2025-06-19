@@ -10,7 +10,7 @@ body {
     align-items: center;
     color: #333;
     position: relative;
-    background-color: #f2f2f2; /* fallback warna */
+    background-color: #f2f2f2;
     overflow: hidden;
 }
 
@@ -25,10 +25,9 @@ body::before {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.2; 
+    opacity: 0.2;
     z-index: -1;
 }
-
 
 .login-container {
     width: 100%;
@@ -37,7 +36,7 @@ body::before {
 }
 
 h2 {
-    color: #2980B9; 
+    color: #2980B9;
     margin-bottom: 10px;
     text-align: center;
     font-size: 2rem;
@@ -46,7 +45,7 @@ h2 {
 }
 
 .subtitle {
-    color: #8E44AD; 
+    color: #8E44AD;
     text-align: center;
     margin-bottom: 5px;
     font-size: 0.9rem;
@@ -59,7 +58,6 @@ h2 {
     margin-bottom: 20px;
     font-weight: 500;
 }
-
 
 form {
     background: rgba(255, 255, 255, 0.95);
@@ -84,7 +82,7 @@ form:hover {
 label {
     display: block;
     margin-bottom: 8px;
-    color: #333; /* Warna gelap untuk label */
+    color: #333;
     font-weight: 500;
     font-size: 0.9rem;
 }
@@ -92,25 +90,47 @@ label {
 input {
     width: 100%;
     padding: 14px 15px;
-    border: 2px solid #BDC3C7; /* Warna abu-abu kebiruan untuk border */
+    border: 2px solid #BDC3C7;
     border-radius: 8px;
     box-sizing: border-box;
     font-size: 15px;
+    background-color: #ECF0F1;
     transition: all 0.3s;
-    background-color: #ECF0F1; /* Warna abu-abu terang untuk input */
 }
 
 input:focus {
-    border-color: #2980B9; /* Biru cerah saat input difokuskan */
+    border-color: #2980B9;
     background-color: white;
-    box-shadow: 0 0 0 4px rgba(41, 128, 185, 0.1); /* Efek focus dengan biru cerah */
+    box-shadow: 0 0 0 4px rgba(41, 128, 185, 0.1);
     outline: none;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 40px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px;
+    opacity: 0.6;
+}
+
+.toggle-password:hover {
+    opacity: 1;
 }
 
 button {
     width: 100%;
     padding: 15px;
-    background: linear-gradient(45deg, #2980B9, #8E44AD); /* Gradient biru cerah ke ungu cerah */
+    background: linear-gradient(45deg, #2980B9, #8E44AD);
     color: white;
     border: none;
     border-radius: 8px;
@@ -122,9 +142,8 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(45deg, #8E44AD, #2980B9); /* Inversi warna gradient saat hover */
+    background: linear-gradient(45deg, #8E44AD, #2980B9);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
 }
 
 button:active {
@@ -134,51 +153,28 @@ button:active {
 .forgot-link {
     display: block;
     text-align: center;
-    color: #2980B9; /* Biru cerah untuk "Lupa Password" agar lebih terlihat */
+    color: #2980B9;
     text-decoration: none;
     margin-top: 20px;
     transition: color 0.3s;
     font-size: 0.85rem;
-    font-weight: 600; /* Menebalkan font agar lebih jelas */
+    font-weight: 600;
 }
 
 .forgot-link:hover {
-    color: #8E44AD; /* Warna ungu cerah saat hover */
-}
-
-.welcome-text {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #2980B9;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.subtitle-text {
     color: #8E44AD;
-    text-align: center;
-    margin-top: 5px;
-    font-size: 1rem;
 }
 
 @media (max-width: 480px) {
     .login-container {
         padding: 0 15px;
     }
-    
+
     h2 {
         font-size: 1.6rem;
     }
-    
+
     form {
         padding: 30px 20px;
-    }
-
-    .welcome-text {
-        font-size: 1rem;
-    }
-
-    .subtitle-text {
-        font-size: 0.9rem;
     }
 }

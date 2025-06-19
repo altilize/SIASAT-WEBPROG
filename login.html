@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Login Pilihan</title>
+    <link rel="stylesheet" href="lgn.css" />
+</head>
+<body>
+    <div class="center-container">
+        <div class="icon-user">
+            <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="User Icon">
+        </div>
+        <div class="login-group">
+            <button class="login-button" onclick="toggleMenu()">
+                <span id="arrow-icon">&gt;</span>&nbsp;&nbsp;LOGIN
+            </button>
+            <div class="dropdown" id="role-menu">
+                <button onclick="goToPage('index.html')">Mahasiswa</button>
+                <button onclick="goToPage('admin.html')">Admin</button>
+                <button onclick="goToPage('dosen.html')">Dosen</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("role-menu");
+            const arrow = document.getElementById("arrow-icon");
+            menu.classList.toggle("show");
+            arrow.classList.toggle("rotated");
+        }
+
+        function goToPage(page) {
+            window.location.href = page;
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.closest('.login-group')) {
+                const menu = document.getElementById("role-menu");
+                const arrow = document.getElementById("arrow-icon");
+                if (menu.classList.contains('show')) {
+                    menu.classList.remove('show');
+                    arrow.classList.remove('rotated');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
